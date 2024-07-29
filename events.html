@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Events Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<h2>JavaScript Events Example</h2>
+
+<!-- Button with inline event handler -->
+<button onclick="displayDate()">The time is?</button>
+
+<!-- Input field with onchange event -->
+<input type="text" id="nameInput" onchange="greetUser()" placeholder="Enter your name">
+
+<!-- Div for displaying messages -->
+<div id="message"></div>
+
+<!-- Button to highlight text on mouse over -->
+<button id="highlightBtn" onmouseover="highlightText()" onmouseout="removeHighlight()">Hover over me</button>
+
+<!-- Script section for JavaScript functions -->
+<script>
+    // Function to display current date and time
+    function displayDate() {
+        document.getElementById('message').innerHTML = `Current Date and Time: ${new Date()}`;
+    }
+
+    // Function to greet the user
+    function greetUser() {
+        let name = document.getElementById('nameInput').value;
+        document.getElementById('message').innerHTML = `Hello, ${name}!`;
+    }
+
+    // Function to highlight text on mouse over
+    function highlightText() {
+        document.getElementById('highlightBtn').classList.add('highlight');
+    }
+
+    // Function to remove highlight on mouse out
+    function removeHighlight() {
+        document.getElementById('highlightBtn').classList.remove('highlight');
+    }
+
+    // Event listener for keydown event
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            alert('Enter key was pressed');
+        }
+    });
+
+    // Event listener for page load
+    window.onload = function() {
+        alert('Page has finished loading');
+    };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+    "name": "JavaScript",
+    "version": "1.0.0",
+    "description": "A project demonstrating JavaScript modules",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+  

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Strings Example</title>
+</head>
+<body>
+
+<h2>JavaScript Strings Example</h2>
+
+<!-- Div for displaying results -->
+<div id="results"></div>
+
+<!-- Script section for JavaScript code -->
+<script>
+    // JavaScript Strings
+    let str = "Hello, JavaScript!";
+    let str2 = "Welcome to the world of programming.";
+
+    // JavaScript String Methods
+    let upperCaseStr = str.toUpperCase(); // Converts to uppercase
+    let lowerCaseStr = str.toLowerCase(); // Converts to lowercase
+    let concatenatedStr = str.concat(" ", str2); // Concatenates two strings
+    let substring = str.substring(7, 18); // Extracts substring from the string
+
+    // JavaScript String Search
+    let indexOfWord = str.indexOf("JavaScript"); // Finds the position of "JavaScript"
+    let includesWord = str.includes("JavaScript"); // Checks if "JavaScript" is in the string
+    let startsWithWord = str.startsWith("Hello"); // Checks if the string starts with "Hello"
+    let endsWithWord = str.endsWith("!"); // Checks if the string ends with "!"
+
+    // JavaScript Template Strings
+    let name = "Jahir";
+    let age = 24;
+    let templateStr = `My name is ${name} and I am ${age} years old.`;
+
+    // Display results
+    document.getElementById('results').innerHTML = `
+        <p><strong>Original String 1:</strong> ${str}</p>
+        <p><strong>Original String 2:</strong> ${str2}</p>
+        <p><strong>Uppercase String:</strong> ${upperCaseStr}</p>
+        <p><strong>Lowercase String:</strong> ${lowerCaseStr}</p>
+        <p><strong>Concatenated String:</strong> ${concatenatedStr}</p>
+        <p><strong>Substring (7, 18):</strong> ${substring}</p>
+        <p><strong>Index of "JavaScript":</strong> ${indexOfWord}</p>
+        <p><strong>Includes "JavaScript":</strong> ${includesWord}</p>
+        <p><strong>Starts with "Hello":</strong> ${startsWithWord}</p>
+        <p><strong>Ends with "!":</strong> ${endsWithWord}</p>
+        <p><strong>Template String:</strong> ${templateStr}</p>
+    `;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Script</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="container"></div>
+    <script>
+        // Reduce Activity in Loops
+        function processArray(arr) {
+            let l = arr.length;
+            for (let i = 0; i < l; i++) {
+                // Process each item in the array
+                console.log(arr[i]);
+            }
+        }
+        const numbers = [1, 2, 3, 4, 5];
+        processArray(numbers);
+
+        // Reduce DOM Access
+        function updateDOM() {
+            const obj = document.getElementById("demo");
+            if (obj) {
+                obj.innerHTML = "Hello World!";
+            }
+        }
+        updateDOM();
+
+        // Reduce DOM Size
+        function createElements() {
+            const container = document.getElementById("container");
+            for (let i = 0; i < 5; i++) {
+                let div = document.createElement("div");
+                div.textContent = "Item " + i;
+                container.appendChild(div);
+            }
+        }
+        createElements();
+
+        // Avoid Unnecessary Variables
+        function displayFullName(firstName, lastName) {
+            document.getElementById("demo").innerHTML = firstName + " " + lastName;
+        }
+        displayFullName("Jahir", "Islam");
+
+        // Delay JavaScript Loading
+        window.onload = function() {
+            const element = document.createElement("script");
+            element.src = "myScript.js";
+            document.body.appendChild(element);
+        };
+
+        // Avoid Using with
+        function calculateSum(a, b) {
+            return a + b;
+        }
+        console.log('Sum:', calculateSum(5, 3));
+    </script>
+</body>
+</html>

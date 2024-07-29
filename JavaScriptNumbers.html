@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Numbers Example</title>
+</head>
+<body>
+
+<h2>JavaScript Numbers Example</h2>
+
+<!-- Div for displaying results -->
+<div id="results"></div>
+
+<!-- Script section for JavaScript code -->
+<script>
+    // JavaScript Numbers
+    let num1 = 42;
+    let num2 = 3.14;
+
+    // JavaScript BigInt
+    let bigIntNum = BigInt(123456789012345678901234567890);
+
+    // JavaScript Number Methods
+    let numStr = "123.456";
+    let parsedInt = Number.parseInt(numStr); // Converts string to integer
+    let parsedFloat = Number.parseFloat(numStr); // Converts string to float
+    let fixedNum = num2.toFixed(2); // Rounds to 2 decimal places
+    let precisionNum = num2.toPrecision(3); // Formats to 3 significant digits
+
+    // JavaScript Number Properties
+    let maxVal = Number.MAX_VALUE; // Maximum numeric value
+    let minVal = Number.MIN_VALUE; // Minimum numeric value
+    let maxSafeInt = Number.MAX_SAFE_INTEGER; // Maximum safe integer
+    let minSafeInt = Number.MIN_SAFE_INTEGER; // Minimum safe integer
+    let notANumber = Number.NaN; // Not-a-Number value
+
+    // Display results
+    document.getElementById('results').innerHTML = `
+        <p><strong>Number 1:</strong> ${num1}</p>
+        <p><strong>Number 2:</strong> ${num2}</p>
+        <p><strong>BigInt Number:</strong> ${bigIntNum}</p>
+        <p><strong>Parsed Integer:</strong> ${parsedInt}</p>
+        <p><strong>Parsed Float:</strong> ${parsedFloat}</p>
+        <p><strong>Number 2 with 2 Decimal Places:</strong> ${fixedNum}</p>
+        <p><strong>Number 2 with 3 Significant Digits:</strong> ${precisionNum}</p>
+        <p><strong>Maximum Value:</strong> ${maxVal}</p>
+        <p><strong>Minimum Value:</strong> ${minVal}</p>
+        <p><strong>Maximum Safe Integer:</strong> ${maxSafeInt}</p>
+        <p><strong>Minimum Safe Integer:</strong> ${minSafeInt}</p>
+        <p><strong>Not-a-Number (NaN):</strong> ${notANumber}</p>
+    `;
+</script>
+
+</body>
+</html>
