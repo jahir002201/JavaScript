@@ -1,13 +1,25 @@
 {
-    "name": "JavaScript",
-    "version": "1.0.0",
-    "description": "A project demonstrating JavaScript modules",
-    "main": "index.js",
-    "type": "module",
-    "scripts": {
-      "start": "node index.js"
-    },
-    "author": "",
-    "license": "ISC"
-  }
-  
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "A project demonstrating JavaScript modules",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jahir002201/JavaScript.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/jahir002201/JavaScript/issues"
+  },
+  "homepage": "https://github.com/jahir002201/JavaScript#readme"
+}
