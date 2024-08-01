@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>jQuery AJAX</title></head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<body>
+  <button id="loadData">Load Data</button>
+  <div id="result"></div>
+  <script>
+    $(document).ready(function() {
+      $('#loadData').on('click', function() {
+        $.ajax({
+          url: 'https://jsonplaceholder.typicode.com/posts/1',
+          method: 'GET',
+          success: function(data) {
+            $('#result').text(JSON.stringify(data));
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

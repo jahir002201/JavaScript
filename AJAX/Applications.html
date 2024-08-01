@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>AJAX Applications</title></head>
+<body>
+  <button id="getPosts">Get Posts</button>
+  <div id="posts"></div>
+  <script>
+    document.getElementById('getPosts').addEventListener('click', function() {
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts', true);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          let posts = JSON.parse(xhr.responseText);
+          let output = '<ul>';
+          posts.forEach(post => {
+            output += `<li>${post.title}</li>`;
+          });
+          output += '</ul>';
+          document.getElementById('posts').innerHTML = output;
+        }
+      };
+      xhr.send();
+    });
+  </script>
+</body>
+</html>

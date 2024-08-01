@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Web Worker API</title></head>
+<body>
+  <script>
+    if (window.Worker) {
+      let myWorker = new Worker('worker.js');
+      myWorker.onmessage = function(e) {
+        console.log('Message from worker:', e.data);
+      };
+      myWorker.postMessage('Hello Worker');
+    }
+  </script>
+</body>
+</html>

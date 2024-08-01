@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>React Example</title>
+  <script src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const e = React.createElement;
+    function App() {
+      return e('div', null, 'Hello, React!');
+    }
+    ReactDOM.render(e(App), document.getElementById('root'));
+  </script>
+</body>
+</html>

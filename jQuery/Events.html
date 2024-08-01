@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>jQuery Events</title></head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<body>
+  <button id="clickMe">Click me!</button>
+  <script>
+    $(document).ready(function() {
+      $('#clickMe').on('click', function() {
+        alert('Button clicked!');
+      });
+    });
+  </script>
+</body>
+</html>

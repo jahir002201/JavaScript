@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>AJAX Examples</title></head>
+<body>
+  <button id="fetchData">Fetch Data</button>
+  <script>
+    document.getElementById('fetchData').addEventListener('click', function() {
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://jsonplaceholder.typicode.com/comments', true);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          let comments = JSON.parse(xhr.responseText);
+          console.log(comments);
+        }
+      };
+      xhr.send();
+    });
+  </script>
+</body>
+</html>

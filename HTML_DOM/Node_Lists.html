@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>DOM Node Lists</title></head>
+<body>
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+  <script>
+    let listItems = document.querySelectorAll('#myList li');
+    listItems.forEach(item => console.log(item.textContent)); 
+  </script>
+</body>
+</html>

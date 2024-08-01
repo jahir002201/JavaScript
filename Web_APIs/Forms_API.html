@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Web Forms API</title></head>
+<body>
+  <form id="myForm">
+    <input type="text" name="name" required>
+    <input type="submit">
+  </form>
+  <script>
+    let form = document.getElementById('myForm');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      console.log('Form submitted:', new FormData(form));
+    });
+  </script>
+</body>
+</html>

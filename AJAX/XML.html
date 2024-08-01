@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>AJAX XML File</title></head>
+<body>
+  <button id="loadXML">Load XML</button>
+  <script>
+    document.getElementById('loadXML').addEventListener('click', function() {
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', 'data.xml', true);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          console.log(xhr.responseXML);
+        }
+      };
+      xhr.send();
+    });
+  </script>
+</body>
+</html>

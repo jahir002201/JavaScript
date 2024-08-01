@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>AJAX Database</title></head>
+<body>
+  <button id="fetchData">Fetch Data</button>
+  <script>
+    document.getElementById('fetchData').addEventListener('click', function() {
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', 'fetch.php', true);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          console.log(xhr.responseText);
+        }
+      };
+      xhr.send();
+    });
+  </script>
+</body>
+</html>

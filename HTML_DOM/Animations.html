@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>DOM Animations</title></head>
+<style>
+  #animateMe {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+  }
+  @keyframes move {
+    from { left: 0; }
+    to { left: 200px; }
+  }
+</style>
+<body>
+  <div id="animateMe"></div>
+  <script>
+    document.getElementById('animateMe').style.animation = 'move 2s infinite';
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>JSON vs XML</title></head>
+<body>
+  <script>
+    // JSON
+    let json = '{"name": "John", "age": 30}';
+    console.log(JSON.parse(json));
+
+    // XML
+    let parser = new DOMParser();
+    let xml = `<person><name>John</name><age>30</age></person>`;
+    let xmlDoc = parser.parseFromString(xml, 'text/xml');
+    console.log(xmlDoc.getElementsByTagName('name')[0].textContent); 
+  </script>
+</body>
+</html>

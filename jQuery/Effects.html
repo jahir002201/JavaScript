@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>jQuery Effects</title></head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<body>
+  <div id="box" style="width: 100px; height: 100px; background-color: green;"></div>
+  <button id="fadeOut">Fade out</button>
+  <script>
+    $(document).ready(function() {
+      $('#fadeOut').on('click', function() {
+        $('#box').fadeOut();
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<person>
+  <name>Jahir</name>
+  <age>24</age>
+  <profession>Mathematician</profession>
+  <interests>
+    <interest>programming</interest>
+    <interest>game design</interest>
+    <interest>mathematics</interest>
+  </interests>
+</person>
